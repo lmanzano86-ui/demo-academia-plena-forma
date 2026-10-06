@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Academia Plena Forma | Foz do Iguaçu</title>
+<meta name="description" content="Academia Plena Forma — musculação, aulas aeróbicas, pilates e personal trainer em Foz do Iguaçu. Agende sua aula experimental.">
+<style>
+:root{--ink:#101114;--coal:#17181c;--card:#1f2127;--orange:#ff5e00;--amber:#ffb400;--w:#fff;--mut:#b9bcc4}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--ink);color:var(--w);line-height:1.55}
+img{max-width:100%;display:block}
+.wrap{max-width:640px;margin:0 auto;background:var(--ink)}
+/* top bar */
+.topbar{background:#000;color:#cfd2d9;font-size:12.5px;padding:8px 16px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700}
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(16,17,20,.96);backdrop-filter:blur(6px);border-bottom:1px solid #2a2c33;display:flex;align-items:center;justify-content:space-between;padding:10px 16px}
+.brand{display:flex;align-items:center;gap:10px}
+.hex{width:42px;height:42px;background:linear-gradient(135deg,var(--orange),var(--amber));clip-path:polygon(25% 5%,75% 5%,100% 50%,75% 95%,25% 95%,0 50%);display:flex;align-items:center;justify-content:center;font-weight:900;color:#000;font-size:17px}
+.brand b{font-size:16px;letter-spacing:.5px}
+.brand small{display:block;font-size:11px;color:var(--mut);font-weight:400}
+.langs{display:flex;gap:6px}
+.langs button{background:#24262d;border:1px solid #3a3d46;color:#fff;font-size:12px;font-weight:700;padding:6px 10px;border-radius:20px;cursor:pointer}
+.langs button.on{background:var(--orange);border-color:var(--orange);color:#000}
+/* hero */
+.hero{position:relative;min-height:78vh;display:flex;align-items:flex-end;overflow:hidden}
+.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,12,.25) 0%,rgba(10,10,12,.55) 45%,rgba(16,17,20,.97) 100%)}
+.slash{position:absolute;top:-40px;right:-70px;width:170px;height:calc(100% + 80px);background:linear-gradient(180deg,var(--orange),var(--amber));transform:skewX(-14deg);opacity:.9;z-index:1}
+.hero-in{position:relative;z-index:2;padding:56px 22px 30px;width:100%}
+.badge{display:inline-block;background:var(--orange);color:#000;font-weight:800;font-size:12px;padding:6px 12px;border-radius:4px;letter-spacing:1px;margin-bottom:14px;transform:skewX(-8deg)}
+.hero h1{font-size:clamp(34px,9.5vw,52px);line-height:1.02;font-weight:900;letter-spacing:-1px;text-transform:uppercase;margin-bottom:10px}
+.hero h1 .hl{color:var(--amber)}
+.hero p.sub{color:#e8eaee;font-size:16px;max-width:46ch;margin-bottom:8px}
+.stars{color:var(--amber);font-size:15px;margin:8px 0 18px}
+.stars b{color:#fff}
+.cta-row{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 20px;border-radius:10px;font-weight:800;font-size:15px;text-decoration:none;border:none;cursor:pointer}
+.btn-wa{background:#25d366;color:#062b16}
+.btn-call{background:transparent;color:#fff;border:2px solid #fff}
+.btn-map{background:var(--orange);color:#000;width:100%;justify-content:center;margin-top:10px}
+.btn:active{transform:scale(.97)}
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);background:var(--coal);border-top:3px solid var(--orange)}
+.stat{padding:16px 6px;text-align:center;border-right:1px solid #2a2c33}
+.stat:last-child{border-right:none}
+.stat b{display:block;font-size:20px;color:var(--amber)}
+.stat span{font-size:11px;color:var(--mut);text-transform:uppercase;letter-spacing:.5px}
+/* sections */
+section{padding:40px 20px}
+.sec-tag{display:inline-block;background:#000;border-left:4px solid var(--orange);color:var(--amber);font-weight:800;font-size:12px;letter-spacing:2px;padding:6px 12px;margin-bottom:10px;text-transform:uppercase}
+h2{font-size:26px;font-weight:900;text-transform:uppercase;letter-spacing:-.5px;margin-bottom:6px}
+.sec-sub{color:var(--mut);font-size:14.5px;margin-bottom:22px}
+/* modalities */
+.mod{background:var(--card);border-radius:14px;overflow:hidden;margin-bottom:16px;border:1px solid #2c2e36}
+.mod img{height:180px;width:100%;object-fit:cover}
+.mod .tx{padding:16px}
+.mod h3{font-size:18px;font-weight:800;margin-bottom:6px;color:var(--amber)}
+.mod p{font-size:14px;color:#d5d8de}
+.note{font-size:11.5px;color:#8a8e99;margin-top:14px;font-style:italic}
+/* plans */
+.plans{display:grid;gap:14px}
+.plan{background:var(--card);border:2px solid #2c2e36;border-radius:14px;padding:22px;text-align:center;position:relative}
+.plan.hot{border-color:var(--orange);transform:scale(1.02);background:linear-gradient(180deg,#232017,#1f2127)}
+.plan .tag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--orange);color:#000;font-size:11px;font-weight:800;padding:4px 14px;border-radius:20px;letter-spacing:1px}
+.plan h3{font-size:17px;font-weight:800;text-transform:uppercase;margin-bottom:4px}
+.plan .price{font-size:34px;font-weight:900;color:var(--amber);margin:6px 0}
+.plan .price small{font-size:14px;color:var(--mut);font-weight:400}
+.plan ul{list-style:none;margin:12px 0 18px;font-size:14px;color:#d5d8de;text-align:left}
+.plan li{padding:6px 0;border-bottom:1px dashed #33363f}
+.plan li::before{content:"✓ ";color:#25d366;font-weight:800}
+/* schedule */
+.sched{width:100%;border-collapse:collapse;font-size:13.5px;background:var(--card);border-radius:12px;overflow:hidden}
+.sched th{background:var(--orange);color:#000;padding:10px 6px;font-size:12px;text-transform:uppercase}
+.sched td{padding:10px 6px;border-top:1px solid #2c2e36;text-align:center;color:#d5d8de}
+.sched td:first-child{font-weight:700;color:#fff;text-align:left;padding-left:12px}
+/* gallery */
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.gal img{border-radius:10px;height:150px;width:100%;object-fit:cover}
+/* reviews */
+.rev{background:var(--card);border-radius:12px;padding:16px;margin-bottom:12px;border:1px solid #2c2e36}
+.rev .stars{margin:0 0 6px;font-size:14px}
+.rev p{font-size:14px;color:#d5d8de}
+.rev b.by{display:block;margin-top:8px;font-size:12.5px;color:var(--mut)}
+.g-badge{display:flex;align-items:center;gap:12px;background:#fff;color:#111;border-radius:12px;padding:14px 16px;margin-bottom:18px}
+.g-badge .n{font-size:34px;font-weight:900}
+.g-badge .t{font-size:13px;color:#444}
+/* location */
+.loc-card{background:var(--card);border-radius:12px;padding:20px;border:1px solid #2c2e36}
+.loc-card p{font-size:15px;margin:6px 0}
+.loc-card a{color:var(--amber);text-decoration:none;font-weight:700}
+/* float wa */
+.wa-float{position:fixed;right:16px;bottom:16px;z-index:60;background:#25d366;color:#062b16;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.5);text-decoration:none}
+.wa-float svg{width:30px;height:30px}
+/* footer */
+footer{background:#000;padding:26px 20px;text-align:center;font-size:12.5px;color:#8a8e99}
+footer .demo{border:1px dashed #4a4d57;border-radius:8px;padding:10px;margin-top:12px;font-size:11.5px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="topbar">
+<span data-pt="Seg a Sáb · 7h às 23h" data-es="Lun a Sáb · 7h a 23h" data-en="Mon to Sat · 7am to 11pm">Seg a Sáb · 7h às 23h</span>
+<a href="tel:+554535276680">(45) 3527-6680</a>
+</div>
+
+<header>
+<div class="brand">
+<div class="hex">PF</div>
+<div><b>PLENA FORMA</b><small data-pt="Academia · Foz do Iguaçu" data-es="Gimnasio · Foz do Iguaçu" data-en="Gym · Foz do Iguaçu">Academia · Foz do Iguaçu</small></div>
+</div>
+<div class="langs">
+<button data-lang="pt" class="on">PT</button>
+<button data-lang="es">ES</button>
+<button data-lang="en">EN</button>
+</div>
+</header>
+
+<section class="hero">
+<img class="bg" src="imgs/hero.jpg" alt="Academia Plena Forma">
+<div class="slash"></div>
+<div class="hero-in">
+<span class="badge" data-pt="AULA EXPERIMENTAL GRÁTIS" data-es="CLASE DE PRUEBA GRATIS" data-en="FREE TRIAL CLASS">AULA EXPERIMENTAL GRÁTIS</span>
+<h1><span data-pt="Sua melhor" data-es="Tu mejor" data-en="Your best">Sua melhor</span> <span class="hl" data-pt="forma" data-es="forma" data-en="shape">forma</span><br><span data-pt="começa aqui" data-es="empieza aquí" data-en="starts here">começa aqui</span></h1>
+<p class="sub" data-pt="Musculação, aulas aeróbicas, pilates e personal trainer no coração de Foz do Iguaçu. Há 12 anos transformando corpos e vidas." data-es="Musculación, clases aeróbicas, pilates y entrenador personal en el corazón de Foz do Iguaçu. 12 años transformando cuerpos y vidas." data-en="Weight training, aerobic classes, pilates and personal training in the heart of Foz do Iguaçu. 12 years transforming bodies and lives.">Musculação, aulas aeróbicas, pilates e personal trainer no coração de Foz do Iguaçu. Há 12 anos transformando corpos e vidas.</p>
+<div class="stars">★★★★★ <b>4.8</b> <span data-pt="no Google · 57 avaliações" data-es="en Google · 57 reseñas" data-en="on Google · 57 reviews">no Google · 57 avaliações</span></div>
+<div class="cta-row">
+<a class="btn btn-wa" href="https://wa.me/554535276680?text=Ol%C3%A1!%20Quero%20agendar%20minha%20aula%20experimental%20gr%C3%A1tis%20na%20Academia%20Plena%20Forma." target="_blank" rel="noopener">◉ <span data-pt="Agendar no WhatsApp" data-es="Agendar por WhatsApp" data-en="Book on WhatsApp">Agendar no WhatsApp</span></a>
+<a class="btn btn-call" href="tel:+554535276680">✆ <span data-pt="Ligar" data-es="Llamar" data-en="Call">Ligar</span></a>
+</div>
+<a class="btn btn-map" href="https://maps.app.goo.gl/a9BPE7EJLABLyV2X9" target="_blank" rel="noopener">📍 <span data-pt="Como chegar" data-es="Cómo llegar" data-en="Get directions">Como chegar</span></a>
+</div>
+</section>
+
+<div class="stats">
+<div class="stat"><b>12+</b><span data-pt="anos de história" data-es="años de historia" data-en="years of history">anos de história</span></div>
+<div class="stat"><b>4.8★</b><span data-pt="avaliação Google" data-es="calificación Google" data-en="Google rating">avaliação Google</span></div>
+<div class="stat"><b>6</b><span data-pt="dias por semana" data-es="días por semana" data-en="days a week">dias por semana</span></div>
+<div class="stat"><b>1ª</b><span data-pt="aula grátis" data-es="clase gratis" data-en="free class">aula grátis</span></div>
+</div>
+
+<section id="modalidades">
+<span class="sec-tag" data-pt="Treine do seu jeito" data-es="Entrena a tu manera" data-en="Train your way">Treine do seu jeito</span>
+<h2 data-pt="Modalidades" data-es="Modalidades" data-en="Programs">Modalidades</h2>
+<p class="sec-sub" data-pt="Do fortalecimento ao emagrecimento: escolha o treino que combina com o seu objetivo." data-es="Del fortalecimiento a la pérdida de peso: elige el entrenamiento que se adapta a tu objetivo." data-en="From strength to weight loss: pick the training that matches your goal.">Do fortalecimento ao emagrecimento: escolha o treino que combina com o seu objetivo.</p>
+
+<div class="mod">
+<img src="imgs/musculacao.jpg" alt="Musculação">
+<div class="tx"><h3 data-pt="Musculação" data-es="Musculación" data-en="Weight training">Musculação</h3>
+<p data-pt="Sala completa de musculação com acompanhamento de professores para hipertrofia, força e definição muscular." data-es="Sala completa de musculación con acompañamiento de profesores para hipertrofia, fuerza y definición muscular." data-en="Full weight room with instructor guidance for hypertrophy, strength and muscle definition.">Sala completa de musculação com acompanhamento de professores para hipertrofia, força e definição muscular.</p></div>
+</div>
+
+<div class="mod">
+<img src="imgs/spinning.jpg" alt="Aulas aeróbicas e spin">
+<div class="tx"><h3 data-pt="Aulas aeróbicas & Spin" data-es="Clases aeróbicas y Spinning" data-en="Aerobic classes & Spin">Aulas aeróbicas & Spin</h3>
+<p data-pt="Aulas coletivas de alto gasto calórico: aeróbica, ritmos e spin cross para emagrecer com energia e diversão." data-es="Clases grupales de alto gasto calórico: aeróbica, ritmos y spin cross para bajar de peso con energía y diversión." data-en="High-calorie group classes: aerobics, dance fitness and spin cross to lose weight with energy and fun.">Aulas coletivas de alto gasto calórico: aeróbica, ritmos e spin cross para emagrecer com energia e diversão.</p></div>
+</div>
+
+<div class="mod">
+<div class="tx"><h3 data-pt="Pilates solo" data-es="Pilates individual" data-en="Private pilates">Pilates solo</h3>
+<p data-pt="Sessões individuais de pilates para postura, flexibilidade e fortalecimento do core, com atenção total do instrutor." data-es="Sesiones individuales de pilates para postura, flexibilidad y fortalecimiento del core, con atención total del instructor." data-en="One-on-one pilates sessions for posture, flexibility and core strength, with the instructor's full attention.">Sessões individuais de pilates para postura, flexibilidade e fortalecimento do core, com atenção total do instrutor.</p></div>
+</div>
+
+<div class="mod">
+<img src="imgs/personal.jpg" alt="Personal trainer">
+<div class="tx"><h3 data-pt="Personal trainer" data-es="Entrenador personal" data-en="Personal trainer">Personal trainer</h3>
+<p data-pt="Treino 100% personalizado com avaliação física e plano feito para o seu corpo, seu ritmo e seu objetivo." data-es="Entrenamiento 100% personalizado con evaluación física y plan hecho para tu cuerpo, tu ritmo y tu objetivo." data-en="Fully personalized training with physical assessment and a plan built for your body, your pace and your goal.">Treino 100% personalizado com avaliação física e plano feito para o seu corpo, seu ritmo e seu objetivo.</p></div>
+</div>
+<p class="note" data-pt="Fotos ilustrativas. Atividades confirmadas no perfil da academia." data-es="Fotos ilustrativas. Actividades confirmadas en el perfil del gimnasio." data-en="Illustrative photos. Activities confirmed on the gym's profile.">Fotos ilustrativas. Atividades confirmadas no perfil da academia.</p>
+</section>
+
+<section id="planos" style="background:var(--coal)">
+<span class="sec-tag" data-pt="Invista em você" data-es="Invierte en ti" data-en="Invest in yourself">Invista em você</span>
+<h2 data-pt="Planos" data-es="Planes" data-en="Plans">Planos</h2>
+<p class="sec-sub" data-pt="Escolha o plano ideal e comece hoje mesmo. Fale com a gente no WhatsApp para confirmar valores e condições." data-es="Elige el plan ideal y empieza hoy mismo. Escríbenos por WhatsApp para confirmar precios y condiciones." data-en="Pick the ideal plan and start today. Message us on WhatsApp to confirm prices and terms.">Escolha o plano ideal e comece hoje mesmo. Fale com a gente no WhatsApp para confirmar valores e condições.</p>
+<div class="plans">
+<div class="plan">
+<h3 data-pt="Mensal" data-es="Mensual" data-en="Monthly">Mensal</h3>
+<div class="price">R$ 99<small>/mês</small></div>
+<ul>
+<li data-pt="Acesso livre à musculação" data-es="Acceso libre a musculación" data-en="Full weight-room access">Acesso livre à musculação</li>
+<li data-pt="Aulas aeróbicas inclusas" data-es="Clases aeróbicas incluidas" data-en="Aerobic classes included">Aulas aeróbicas inclusas</li>
+<li data-pt="Sem fidelidade" data-es="Sin permanencia" data-en="No commitment">Sem fidelidade</li>
+</ul>
+<a class="btn btn-wa" style="width:100%;justify-content:center" href="https://wa.me/554535276680?text=Quero%20o%20plano%20Mensal!" target="_blank" rel="noopener" data-pt="Quero este" data-es="Lo quiero" data-en="I want this">Quero este</a>
+</div>
+<div class="plan hot">
+<div class="tag" data-pt="MAIS PROCURADO" data-es="EL MÁS PEDIDO" data-en="MOST POPULAR">MAIS PROCURADO</div>
+<h3 data-pt="Trimestral" data-es="Trimestral" data-en="Quarterly">Trimestral</h3>
+<div class="price">R$ 89<small>/mês</small></div>
+<ul>
+<li data-pt="Tudo do plano Mensal" data-es="Todo lo del plan Mensual" data-en="Everything in Monthly">Tudo do plano Mensal</li>
+<li data-pt="Avaliação física inclusa" data-es="Evaluación física incluida" data-en="Physical assessment included">Avaliação física inclusa</li>
+<li data-pt="Desconto de 10% no total" data-es="10% de descuento en el total" data-en="10% off the total">Desconto de 10% no total</li>
+</ul>
+<a class="btn btn-wa" style="width:100%;justify-content:center" href="https://wa.me/554535276680?text=Quero%20o%20plano%20Trimestral!" target="_blank" rel="noopener" data-pt="Quero este" data-es="Lo quiero" data-en="I want this">Quero este</a>
+</div>
+<div class="plan">
+<h3 data-pt="Anual" data-es="Anual" data-en="Annual">Anual</h3>
+<div class="price">R$ 79<small>/mês</small></div>
+<ul>
+<li data-pt="Tudo do plano Trimestral" data-es="Todo lo del plan Trimestral" data-en="Everything in Quarterly">Tudo do plano Trimestral</li>
+<li data-pt="2 meses de personal com desconto" data-es="2 meses de entrenador con descuento" data-en="2 months of discounted personal training">2 meses de personal com desconto</li>
+<li data-pt="Melhor custo-benefício" data-es="Mejor relación calidad-precio" data-en="Best value">Melhor custo-benefício</li>
+</ul>
+<a class="btn btn-wa" style="width:100%;justify-content:center" href="https://wa.me/554535276680?text=Quero%20o%20plano%20Anual!" target="_blank" rel="noopener" data-pt="Quero este" data-es="Lo quiero" data-en="I want this">Quero este</a>
+</div>
+</div>
+<p class="note" data-pt="Valores de amostra para demonstração. Consulte a academia pelos preços oficiais." data-es="Precios de muestra para demostración. Consulte al gimnasio por los precios oficiales." data-en="Sample prices for demonstration. Ask the gym for official prices.">Valores de amostra para demonstração. Consulte a academia pelos preços oficiais.</p>
+</section>
+
+<section id="horarios">
+<span class="sec-tag" data-pt="Organize sua semana" data-es="Organiza tu semana" data-en="Plan your week">Organize sua semana</span>
+<h2 data-pt="Horários" data-es="Horarios" data-en="Schedule">Horários</h2>
+<p class="sec-sub" data-pt="Musculação livre em todo o horário de funcionamento. Aulas coletivas nos horários abaixo." data-es="Musculación libre en todo el horario de apertura. Clases grupales en los horarios siguientes." data-en="Open weight-room during all opening hours. Group classes at the times below.">Musculação livre em todo o horário de funcionamento. Aulas coletivas nos horários abaixo.</p>
+<table class="sched">
+<tr><th></th><th data-pt="Seg–Sex" data-es="Lun–Vie" data-en="Mon–Fri">Seg–Sex</th><th data-pt="Sábado" data-es="Sábado" data-en="Saturday">Sábado</th></tr>
+<tr><td data-pt="Abertura" data-es="Apertura" data-en="Open">Abertura</td><td>7h – 23h</td><td>7h – 23h</td></tr>
+<tr><td>Spin Cross</td><td>7h · 12h · 19h</td><td>9h</td></tr>
+<tr><td data-pt="Aeróbica / Ritmos" data-es="Aeróbica / Ritmos" data-en="Aerobics / Dance">Aeróbica / Ritmos</td><td>8h · 18h</td><td>10h</td></tr>
+<tr><td>Pilates</td><td data-pt="Com agendamento" data-es="Con cita previa" data-en="By appointment">Com agendamento</td><td data-pt="Com agendamento" data-es="Con cita previa" data-en="By appointment">Com agendamento</td></tr>
+</table>
+<p class="note" data-pt="Grade de exemplo. Confirme os horários das aulas diretamente na academia." data-es="Horario de ejemplo. Confirme los horarios de las clases directamente en el gimnasio." data-en="Sample schedule. Confirm class times directly with the gym.">Grade de exemplo. Confirme os horários das aulas diretamente na academia.</p>
+</section>
+
+<section id="galeria" style="background:var(--coal)">
+<span class="sec-tag" data-pt="Nosso espaço" data-es="Nuestro espacio" data-en="Our space">Nosso espaço</span>
+<h2 data-pt="Galeria" data-es="Galería" data-en="Gallery">Galeria</h2>
+<div class="gal">
+<img src="imgs/hero.jpg" alt="Sala de musculação">
+<img src="imgs/musculacao.jpg" alt="Equipamentos">
+<img src="imgs/spinning.jpg" alt="Aula de spin">
+<img src="imgs/personal.jpg" alt="Treino acompanhado">
+</div>
+<p class="note" data-pt="Fotos ilustrativas." data-es="Fotos ilustrativas." data-en="Illustrative photos.">Fotos ilustrativas.</p>
+</section>
+
+<section id="avaliacoes">
+<span class="sec-tag" data-pt="Quem treina, aprova" data-es="Quien entrena, aprueba" data-en="Members approve">Quem treina, aprova</span>
+<h2 data-pt="Avaliações" data-es="Reseñas" data-en="Reviews">Avaliações</h2>
+<div class="g-badge">
+<div class="n">4.8</div>
+<div class="t"><b>★★★★★</b><br><span data-pt="57 avaliações no Google" data-es="57 reseñas en Google" data-en="57 Google reviews">57 avaliações no Google</span></div>
+</div>
+<div class="rev"><div class="stars">★★★★★</div>
+<p data-pt="“Boa academia, ótimos aparelhos, estrutura e bons profissionais.”" data-es="“Buen gimnasio, excelentes aparatos, estructura y buenos profesionales.”" data-en="“Good gym, great equipment, structure and great professionals.”">“Boa academia, ótimos aparelhos, estrutura e bons profissionais.”</p><b class="by">— Rayan A. · Google</b></div>
+<div class="rev"><div class="stars">★★★★★</div>
+<p data-pt="“Excelente academia, ótimo custo-benefício, atendimento amistoso. Localização excelente.”" data-es="“Excelente gimnasio, óptima relación calidad-precio, trato amable. Ubicación excelente.”" data-en="“Excellent gym, great value, friendly service. Excellent location.”">“Excelente academia, ótimo custo-benefício, atendimento amistoso. Localização excelente.”</p><b class="by">— Camila B. · Google</b></div>
+<div class="rev"><div class="stars">★★★★★</div>
+<p data-pt="“O professor que atende pela manhã é muito profissional. Os proprietários são simpáticos e atenciosos.”" data-es="“El profesor de la mañana es muy profesional. Los dueños son amables y atentos.”" data-en="“The morning instructor is very professional. The owners are kind and attentive.”">“O professor que atende pela manhã é muito profissional. Os proprietários são simpáticos e atenciosos.”</p><b class="by">— Maria Gloria T. · Google</b></div>
+</section>
+
+<section id="contato" style="background:var(--coal)">
+<span class="sec-tag" data-pt="Venha nos visitar" data-es="Ven a visitarnos" data-en="Come visit us">Venha nos visitar</span>
+<h2 data-pt="Onde estamos" data-es="Dónde estamos" data-en="Find us">Onde estamos</h2>
+<div class="loc-card">
+<p>📍 <b>Av. Juscelino Kubitscheck, 1059</b><br><span data-pt="Centro · Foz do Iguaçu – PR · CEP 85851-210" data-es="Centro · Foz do Iguaçu – PR · CP 85851-210" data-en="Centro · Foz do Iguaçu – PR · ZIP 85851-210">Centro · Foz do Iguaçu – PR · CEP 85851-210</span></p>
+<p>🕖 <span data-pt="Segunda a sábado · 7h às 23h" data-es="Lunes a sábado · 7h a 23h" data-en="Monday to Saturday · 7am to 11pm">Segunda a sábado · 7h às 23h</span></p>
+<p>📞 <a href="tel:+554535276680">(45) 3527-6680</a></p>
+<a class="btn btn-map" style="margin-top:14px" href="https://maps.app.goo.gl/a9BPE7EJLABLyV2X9" target="_blank" rel="noopener">📍 <span data-pt="Abrir no Google Maps" data-es="Abrir en Google Maps" data-en="Open in Google Maps">Abrir no Google Maps</span></a>
+</div>
+</section>
+
+<footer>
+<b style="color:#fff">PLENA FORMA</b> · <span data-pt="Academia em Foz do Iguaçu" data-es="Gimnasio en Foz do Iguaçu" data-en="Gym in Foz do Iguaçu">Academia em Foz do Iguaçu</span><br>
+<a href="tel:+554535276680" style="color:var(--amber)">(45) 3527-6680</a>
+<div class="demo" data-pt="Página demonstrativa criada por New Age Professional Services. Textos, preços de planos e horários de aulas são ilustrativos e devem ser confirmados com a academia." data-es="Página de demostración creada por New Age Professional Services. Textos, precios de planes y horarios de clases son ilustrativos y deben confirmarse con el gimnasio." data-en="Demo page created by New Age Professional Services. Plan prices and class schedules are illustrative and must be confirmed with the gym.">Página demonstrativa criada por New Age Professional Services.</div>
+</footer>
+
+</div>
+<a class="wa-float" href="https://wa.me/554535276680?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Academia%20Plena%20Forma." target="_blank" rel="noopener" aria-label="WhatsApp">
+<svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 1.9 6.5L4 29l7.7-1.8c1.8 1 3.9 1.6 6.3 1.6 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-2 0-3.9-.5-5.5-1.5l-.4-.2-4.5 1 1-4.4-.3-.4c-1.1-1.7-1.7-3.7-1.7-5.8 0-5.4 4.4-9.8 9.8-9.8s9.8 4.4 9.8 9.8-4.4 9.9-8.2 9.9zm5.4-7.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.2-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.5l-1-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/></svg>
+</a>
+<script>
+function setLang(l){
+  document.querySelectorAll('[data-pt]').forEach(function(el){
+    var t = el.getAttribute('data-'+l);
+    if(t!==null){ el.innerHTML = t; }
+  });
+  document.documentElement.lang = l==='pt'?'pt-BR':l;
+  document.querySelectorAll('.langs button').forEach(function(b){ b.classList.toggle('on', b.dataset.lang===l); });
+  try{ localStorage.setItem('pf-lang', l); }catch(e){}
+}
+document.querySelectorAll('.langs button').forEach(function(b){
+  b.addEventListener('click', function(){ setLang(b.dataset.lang); });
+});
+try{ var s = localStorage.getItem('pf-lang'); if(s) setLang(s); }catch(e){}
+</script>
+</body>
+</html>
